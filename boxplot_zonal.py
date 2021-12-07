@@ -48,6 +48,7 @@ kge2 = kge2.dropna(dim = 'z')
 kge3 = kge3.dropna(dim = 'z')
 kge4 = kge4.dropna(dim = 'z')
 
+
 kge_seas1 = [kge1,kge2, kge3,kge4]
 
 ax1 = fig.add_axes(pos[0])
@@ -60,13 +61,10 @@ ax1.set_xticklabels(['umpd', 'mpd', 'umpdcor', 'mpdcor'])
 ax1.set_ylabel('KGE - '+str(kge_umpd_seas1.season.isel(season = 0).values))
 ax1.set_title('UKESM1',fontweight = 'bold')
 ax1.set_title(alp[0],fontweight = 'bold', loc='left')
-ax1.arrow(1.2, 0.6, 0.6, 0.01, width=0.04, linewidth=0.1, capstyle = 'butt',\
-          shape='right', head_width=0.05, head_length=0.1,\
-          facecolor=cmap40, edgecolor='k', clip_on=False)
-          
-ax1.arrow(3.2, 0.6, 0.6, 0.01, width=0.04, linewidth=0.1,capstyle = 'butt',\
-          shape='right', head_width=0.05, head_length=0.1,\
-          facecolor=cmap40, edgecolor='k', clip_on=False)
+
+
+ax1.annotate(s='', xy=(1.8,0.61), xytext=(1.2,0.6), arrowprops=dict(color='b', width = 0.5, headwidth = 7.5))
+ax1.annotate(s='', xy=(3.8,0.61), xytext=(3.2,0.6), arrowprops=dict(color='b', width = 0.5, headwidth = 7.5))
 
 kge1 = kge_umpd_seas2.kge.isel(season =0).stack(z = ("lat","lon"))
 kge2 = kge_mpd_seas2.kge.isel(season =0).stack(z = ("lat","lon"))
@@ -77,6 +75,7 @@ kge1 = kge1.dropna(dim = 'z')
 kge2 = kge2.dropna(dim = 'z')
 kge3 = kge3.dropna(dim = 'z')
 kge4 = kge4.dropna(dim = 'z')
+
 
 kge_seas1 = [kge1,kge2, kge3,kge4]
 
@@ -100,6 +99,8 @@ kge1 = kge1.dropna(dim = 'z')
 kge2 = kge2.dropna(dim = 'z')
 kge3 = kge3.dropna(dim = 'z')
 kge4 = kge4.dropna(dim = 'z')
+
+
 
 kge_seas1 = [kge1,kge2, kge3,kge4]
 
@@ -130,6 +131,7 @@ kge2 = kge2.dropna(dim = 'z')
 kge3 = kge3.dropna(dim = 'z')
 kge4 = kge4.dropna(dim = 'z')
 
+
 kge_seas1 = [kge1,kge2, kge3,kge4]
 
 ax1 = fig.add_axes(pos[3])
@@ -153,6 +155,7 @@ kge2 = kge2.dropna(dim = 'z')
 kge3 = kge3.dropna(dim = 'z')
 kge4 = kge4.dropna(dim = 'z')
 
+
 kge_seas1 = [kge1,kge2, kge3,kge4]
 
 ax1 = fig.add_axes(pos[4])
@@ -165,13 +168,9 @@ ax1.set_xticklabels(['umpd', 'mpd', 'umpdcor', 'mpdcor'])
 ax1.set_ylabel('KGE - '+ str(kge_umpd_seas1.season.isel(season = 2).values))
 ax1.set_title(alp[4],fontweight = 'bold', loc='left')
 
-ax1.arrow(1.2, 0.9, 0.6, 0.01, width=0.016, linewidth=0.1, capstyle = 'butt',\
-          shape='right', head_width=0.026, head_length=0.1,\
-          facecolor=cmap40, edgecolor='k', clip_on=False)
-          
-ax1.arrow(3.2, 0.9, 0.6, 0.01, width=0.016, linewidth=0.1,capstyle = 'butt',\
-          shape='right', head_width=0.026, head_length=0.1,\
-          facecolor=cmap40, edgecolor='k', clip_on=False)
+
+ax1.annotate(s='', xy=(1.8,0.91), xytext=(1.2,0.9), arrowprops=dict(color='b', width = 0.5, headwidth = 7.5))
+ax1.annotate(s='', xy=(3.8,0.91), xytext=(3.2,0.9), arrowprops=dict(color='b', width = 0.5, headwidth = 7.5))
 
 kge1 = kge_umpd_seas2.kge.isel(season =2).stack(z = ("lat","lon"))
 kge2 = kge_mpd_seas2.kge.isel(season =2).stack(z = ("lat","lon"))
@@ -182,6 +181,7 @@ kge1 = kge1.dropna(dim = 'z')
 kge2 = kge2.dropna(dim = 'z')
 kge3 = kge3.dropna(dim = 'z')
 kge4 = kge4.dropna(dim = 'z')
+
 
 kge_seas1 = [kge1,kge2, kge3,kge4]
 
@@ -194,13 +194,9 @@ ax1.spines['left'].set_color('0.75')
 ax1.set_xticklabels(['umpd', 'mpd', 'umpdcor', 'mpdcor'])
 ax1.set_title(alp[5],fontweight = 'bold', loc='left')
 
-ax1.arrow(1.2, 0.9, 0.6, 0.01, width=0.016, linewidth=0.1,capstyle = 'butt',\
-          shape='right', head_width=0.026, head_length=0.1,\
-          facecolor=cmap40, edgecolor='k', clip_on=False)
           
-ax1.arrow(3.2, 0.9, 0.6, 0.01, width=0.016, linewidth=0.1,capstyle = 'butt',\
-          shape='right', head_width=0.026, head_length=0.1,\
-          facecolor=cmap40, edgecolor='k', clip_on=False)
+ax1.annotate(s='', xy=(1.8,0.91), xytext=(1.2,0.9), arrowprops=dict(color='b', width = 0.5, headwidth = 7.5))
+ax1.annotate(s='', xy=(3.8,0.91), xytext=(3.2,0.9), arrowprops=dict(color='b', width = 0.5, headwidth = 7.5))
 
 kge1 = kge_umpd_seas1.kge.isel(season =3).stack(z = ("lat","lon"))
 kge2 = kge_mpd_seas1.kge.isel(season =3).stack(z = ("lat","lon"))
@@ -211,6 +207,8 @@ kge1 = kge1.dropna(dim = 'z')
 kge2 = kge2.dropna(dim = 'z')
 kge3 = kge3.dropna(dim = 'z')
 kge4 = kge4.dropna(dim = 'z')
+
+
 
 kge_seas1 = [kge1,kge2, kge3,kge4]
 
@@ -234,6 +232,8 @@ kge2 = kge2.dropna(dim = 'z')
 kge3 = kge3.dropna(dim = 'z')
 kge4 = kge4.dropna(dim = 'z')
 
+
+
 kge_seas1 = [kge1,kge2, kge3,kge4]
 
 ax1 = fig.add_axes(pos[7])
@@ -245,13 +245,10 @@ ax1.spines['left'].set_color('0.75')
 ax1.set_xticklabels(['umpd', 'mpd', 'umpdcor', 'mpdcor'])
 ax1.set_title(alp[7],fontweight = 'bold', loc='left')
 
-ax1.arrow(1.2, 0.4, 0.6, 0.01, width=0.02, linewidth=0.1, capstyle = 'butt',\
-          shape='right', head_width=0.03, head_length=0.1,\
-          facecolor=cmap40, edgecolor='k', clip_on=False)
+
           
-ax1.arrow(3.2, 0.4, 0.6, 0.01, width=0.02, linewidth=0.1,capstyle = 'butt',\
-          shape='right', head_width=0.03, head_length=0.1,\
-          facecolor=cmap40, edgecolor='k', clip_on=False)
+ax1.annotate(s='', xy=(1.8,0.41), xytext=(1.2,0.4), arrowprops=dict(color='b', width = 0.5, headwidth = 7.5))
+ax1.annotate(s='', xy=(3.8,0.41), xytext=(3.2,0.4), arrowprops=dict(color='b', width = 0.5, headwidth = 7.5))
 plt.savefig('../plot_jun/kge_bp_seasonal_both.png') 
 
 rmse_umpd_seas1= xr.open_dataset('../output/rmse_umpd_global_seas_'+model1+'.nc')
@@ -286,6 +283,7 @@ rmse1 = rmse1.dropna(dim = 'z')
 rmse2 = rmse2.dropna(dim = 'z')
 rmse3 = rmse3.dropna(dim = 'z')
 rmse4 = rmse4.dropna(dim = 'z')
+
 
 rmse_seas1 = [rmse1,rmse2, rmse3,rmse4]
 
@@ -346,13 +344,10 @@ ax1.spines['left'].set_color('0.75')
 ax1.set_xticklabels(['umpd', 'mpd', 'umpdcor', 'mpdcor'])
 ax1.set_ylabel('RMSE - '+ str(rmse_umpd_seas1.season.isel(season = 1).values))
 ax1.set_title(alp[2],fontweight = 'bold', loc='left')
-ax1.arrow(1.2, 5, 0.6, -0.1, width=0.1, linewidth=0.1, capstyle = 'butt',\
-          shape='right', head_width=0.2, head_length=0.1,\
-          facecolor=cmap40, edgecolor='k', clip_on=False)
-          
-ax1.arrow(3.2, 5, 0.6, -0.1, width=0.1, linewidth=0.1,capstyle = 'butt',\
-          shape='right', head_width=0.2, head_length=0.1,\
-          facecolor=cmap40, edgecolor='k', clip_on=False)
+
+
+ax1.annotate(s='', xy=(1.8,4.9), xytext=(1.2,5), arrowprops=dict(color='b', width = 0.5, headwidth = 7.5))
+ax1.annotate(s='', xy=(3.8,4.9), xytext=(3.2,5), arrowprops=dict(color='b', width = 0.5, headwidth = 7.5))
 
 rmse1 = rmse_umpd_seas2.rmse.isel(season =1).stack(z = ("lat","lon"))
 rmse2 = rmse_mpd_seas2.rmse.isel(season =1).stack(z = ("lat","lon"))
@@ -366,6 +361,7 @@ rmse4 = rmse4.dropna(dim = 'z')
 
 rmse_seas1 = [rmse1,rmse2, rmse3,rmse4]
 
+
 ax1 = fig.add_axes(pos[3])
 plt.boxplot(rmse_seas1,  showmeans=True, showfliers = False)
 ax1.spines['bottom'].set_color('0.75')
@@ -374,13 +370,10 @@ ax1.spines['right'].set_color('0.75')
 ax1.spines['left'].set_color('0.75')
 ax1.set_xticklabels(['umpd', 'mpd', 'umpdcor', 'mpdcor'])
 ax1.set_title(alp[3],fontweight = 'bold', loc='left')
-ax1.arrow(1.2, 5, 0.6, -0.1, width=0.1, linewidth=0.1, capstyle = 'butt',\
-          shape='right', head_width=0.2, head_length=0.1,\
-          facecolor=cmap40, edgecolor='k', clip_on=False)
-          
-ax1.arrow(3.2, 5, 0.6, -0.1, width=0.1, linewidth=0.1,capstyle = 'butt',\
-          shape='right', head_width=0.2, head_length=0.1,\
-          facecolor=cmap40, edgecolor='k', clip_on=False)
+
+
+ax1.annotate(s='', xy=(1.8,4.9), xytext=(1.2,5), arrowprops=dict(color='b', width = 0.5, headwidth = 7.5))
+ax1.annotate(s='', xy=(3.8,4.9), xytext=(3.2,5), arrowprops=dict(color='b', width = 0.5, headwidth = 7.5))
 
 rmse1 = rmse_umpd_seas1.rmse.isel(season =2).stack(z = ("lat","lon"))
 rmse2 = rmse_mpd_seas1.rmse.isel(season =2).stack(z = ("lat","lon"))
@@ -404,13 +397,8 @@ ax1.set_xticklabels(['umpd', 'mpd', 'umpdcor', 'mpdcor'])
 ax1.set_ylabel('RMSE - '+ str(rmse_umpd_seas1.season.isel(season = 2).values))
 ax1.set_title(alp[4],fontweight = 'bold', loc='left')
 
-ax1.arrow(1.2, 6, 0.6, -0.1, width=0.1, linewidth=0.1, capstyle = 'butt',\
-          shape='right', head_width=0.2, head_length=0.1,\
-          facecolor=cmap40, edgecolor='k', clip_on=False)
-          
-ax1.arrow(3.2, 6, 0.6, -0.1, width=0.1, linewidth=0.1,capstyle = 'butt',\
-          shape='right', head_width=0.2, head_length=0.1,\
-          facecolor=cmap40, edgecolor='k', clip_on=False)
+ax1.annotate(s='', xy=(1.8,5.9), xytext=(1.2,6), arrowprops=dict(color='b', width = 0.5, headwidth = 7.5))
+ax1.annotate(s='', xy=(3.8,5.9), xytext=(3.2,6), arrowprops=dict(color='b', width = 0.5, headwidth = 7.5))
 
 rmse1 = rmse_umpd_seas2.rmse.isel(season =2).stack(z = ("lat","lon"))
 rmse2 = rmse_mpd_seas2.rmse.isel(season =2).stack(z = ("lat","lon"))
@@ -433,13 +421,9 @@ ax1.spines['left'].set_color('0.75')
 ax1.set_xticklabels(['umpd', 'mpd', 'umpdcor', 'mpdcor'])
 ax1.set_title(alp[5],fontweight = 'bold', loc='left')
 
-ax1.arrow(1.2, 6, 0.6, -0.1, width=0.1, linewidth=0.1, capstyle = 'butt',\
-          shape='right', head_width=0.2, head_length=0.1,\
-          facecolor=cmap40, edgecolor='k', clip_on=False)
-          
-ax1.arrow(3.2, 6, 0.6, -0.1, width=0.1, linewidth=0.1,capstyle = 'butt',\
-          shape='right', head_width=0.2, head_length=0.1,\
-          facecolor=cmap40, edgecolor='k', clip_on=False)
+
+ax1.annotate(s='', xy=(1.8,5.9), xytext=(1.2,6), arrowprops=dict(color='b', width = 0.5, headwidth = 7.5))
+ax1.annotate(s='', xy=(3.8,5.9), xytext=(3.2,6), arrowprops=dict(color='b', width = 0.5, headwidth = 7.5))
 
 rmse1 = rmse_umpd_seas1.rmse.isel(season =3).stack(z = ("lat","lon"))
 rmse2 = rmse_mpd_seas1.rmse.isel(season =3).stack(z = ("lat","lon"))
@@ -450,7 +434,6 @@ rmse1 = rmse1.dropna(dim = 'z')
 rmse2 = rmse2.dropna(dim = 'z')
 rmse3 = rmse3.dropna(dim = 'z')
 rmse4 = rmse4.dropna(dim = 'z')
-
 rmse_seas1 = [rmse1,rmse2, rmse3,rmse4]
 
 ax1 = fig.add_axes(pos[6])
@@ -474,6 +457,7 @@ rmse3 = rmse3.dropna(dim = 'z')
 rmse4 = rmse4.dropna(dim = 'z')
 
 rmse_seas1 = [rmse1,rmse2, rmse3,rmse4]
+
 
 ax1 = fig.add_axes(pos[7])
 plt.boxplot(rmse_seas1,  showmeans=True, showfliers = False)
@@ -514,6 +498,8 @@ rmse2 = rmse2.dropna(dim = 'z')
 rmse3 = rmse3.dropna(dim = 'z')
 rmse4 = rmse4.dropna(dim = 'z')
 
+print(model1,'yearly',rmse1.mean(),rmse2.mean(),rmse3.mean(),rmse4.mean())
+
 data_rmse_cm = [rmse1, rmse2, rmse3, rmse4]
 
 #plot box and longitude for KGE
@@ -525,6 +511,8 @@ kge1 = kge1.dropna(dim = 'z')
 kge2 = kge2.dropna(dim = 'z')
 kge3 = kge3.dropna(dim = 'z')
 kge4 = kge4.dropna(dim = 'z')
+
+print(model1,'yearly',kge1.mean(),kge2.mean(),kge3.mean(),kge4.mean())
 
 data_kge_cm = [kge1, kge2, kge3, kge4]
 
@@ -564,6 +552,7 @@ rmse2 = rmse2.dropna(dim = 'z')
 rmse3 = rmse3.dropna(dim = 'z')
 rmse4 = rmse4.dropna(dim = 'z')
 
+print(model2,'yearly',rmse1.mean(),rmse2.mean(),rmse3.mean(),rmse4.mean())
 data_rmse_um = [rmse1, rmse2, rmse3, rmse4]
 
 #plot box and longitude for KGE
@@ -575,6 +564,8 @@ kge1 = kge1.dropna(dim = 'z')
 kge2 = kge2.dropna(dim = 'z')
 kge3 = kge3.dropna(dim = 'z')
 kge4 = kge4.dropna(dim = 'z')
+
+print(model2,'yearly',kge1.mean(),kge2.mean(),kge3.mean(),kge4.mean())
 
 data_kge_um = [kge1, kge2, kge3, kge4]
 
@@ -698,6 +689,8 @@ ax3.set_title('c.',fontweight = 'bold', loc='left')
 plt.tight_layout()
 
 plt.savefig('../plot_jun/kge_lon_bp_both.png')
+
+
 
 
 
